@@ -29,6 +29,7 @@ Plugin 'tpope/vim-bundler'
 
 call vundle#end()
 syntax on
+au BufRead,BufNewFile *.graph set filetype=graph
 filetype on
 filetype plugin indent on
 
