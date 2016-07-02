@@ -4,12 +4,6 @@
 " Last Change:      $Date: Ср. июня 30 14:38:46 UTC 2016$
 " Filenames:        *.graph
 " Version:          $Id: graph.vim,v 1.0 $
-"
-"  Copy graph.vim to ~/.vim/syntax/
-"
-"  To enable automatic backlight record in .vimrc
-"    au BufRead,BufNewFile *.graph set filetype=graph
-"
 
 if version < 600
   syntax clear
