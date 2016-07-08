@@ -74,11 +74,17 @@ let g:buffergator_sort_regime = "mru"
 let g:syntastic_javascript_checkers = ['eslint']
 
 let mapleader=","
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_max_files=0
-let g:ctrlp_max_depth=40
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*,*/node_modules/*,*/log/*
 let g:ctrlp_regexp = 1
+let g:ctrlp_custom_ignore = 'tmp$\|\.git$\|\.hg$\|\.svn$\|.rvm$|.bundle$\|vendor'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:15,results:100'
+let g:ctrlp_match_window_reversed=0
+let g:ctrlp_mruf_max=100
+let g:ctrlp_follow_symlinks=1
+let g:ctrlp_clear_cache_on_exit=0
+
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
