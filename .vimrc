@@ -16,8 +16,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'bling/vim-airline'
 Plugin 'mattn/emmet-vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/vimshell.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'othree/html5.vim'
 Plugin 'elzr/vim-json'
@@ -26,10 +24,11 @@ Plugin 'mxw/vim-jsx'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
+Plugin 'simeji/winresizer'
+Plugin 'cakebaker/scss-syntax.vim'
 
 call vundle#end()
 syntax on
-au BufRead,BufNewFile *.graph set filetype=graph
 filetype on
 filetype plugin indent on
 
@@ -74,6 +73,13 @@ let g:buffergator_viewport_split_policy = "B"
 let g:buffergator_sort_regime = "mru"
 let g:syntastic_javascript_checkers = ['eslint']
 
+let mapleader=","
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
+let g:ctrlp_regexp = 1
+
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -83,7 +89,9 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby setlocal omnifunc=rubycomplete#CompleteTags
 
-let mapleader=","
+au BufRead,BufNewFile *.graph set filetype=graph
+au BufRead,BufNewFile *.scss set filetype=scss.css
+
 
 " Отключение стрелочек
 noremap <Up> <nop>
