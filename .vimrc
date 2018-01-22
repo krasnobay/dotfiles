@@ -27,6 +27,9 @@ Plugin 'tpope/vim-bundler'
 Plugin 'simeji/winresizer'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'heavenshell/vim-jsdoc'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'szw/vim-tags'
+
 
 call vundle#end()
 syntax on
@@ -62,6 +65,13 @@ set t_Co=256
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+set exrc
+set secure
+let g:vim_tags_auto_generate = 1
+
+
+let g:typescript_indent_disable = 1
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
