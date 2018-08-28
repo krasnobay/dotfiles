@@ -1,8 +1,3 @@
-" Tomorrow Night Eighties - Full Colour and 256 Colour
-" http://chriskempson.com
-"
-" Hex colour conversion functions borrowed from the theme "Desert256""
-
 " Default GUI Colours
 let s:foreground = "cccccc"
 let s:background = "2d2d2d"

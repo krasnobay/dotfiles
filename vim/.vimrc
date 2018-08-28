@@ -12,19 +12,27 @@ Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-commentary'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'bling/vim-airline'
+Plugin 'simeji/winresizer'
 
-" syntax
+" base
 Plugin 'scrooloose/syntastic'
+Plugin 'elzr/vim-json'
+
+" front
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'othree/html5.vim'
-Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-Plugin 'simeji/winresizer'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'leafgarland/typescript-vim'
+
+" rails
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+
+" golang
+Plugin 'fatih/vim-go'
+
 
 
 call vundle#end()
@@ -32,7 +40,7 @@ syntax on
 filetype on
 filetype plugin indent on
 
-colorscheme Tomorrow-Night-Eighties
+colorscheme sunrise
 
 set history=500
 set backspace=eol,start,indent
